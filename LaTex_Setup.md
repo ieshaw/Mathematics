@@ -9,7 +9,12 @@
 2. Install Latexing
 3. Link to Skim
 
+## Install LaTeX
+
+For Mac, use [MacTeX](https://tug.org/mactex/mactex-download.html). This may take a while to download.
+
 ## Install Latexing
+Great into is also [here](https://github.com/LaTeXing/LaTeXing-Documentation/blob/master/intro.md). 
 To install Latexing, you first need to have Package Control. Fire up Sublime
 ```
 Tools > Install Package Control
@@ -18,7 +23,7 @@ With this installed, open up Package control
 ```
 Sublime Text > Preferences > Package Control
 ```
-and type in `LaTeXing`.
+Now you want to prep to install by typing in `Install Package`, then type in `LaTeXing`.
 This should set you up!
 
 ## Installing Latex Auto-Complete
@@ -26,7 +31,7 @@ Open up Package control
 ```
 Sublime Text > Preferences > Package Control
 ```
-and type in `LaTeXing-CWL`.
+and type in `Install Package`, then `LaTeXing-CWL`.
 
 
 ## Linking to Skim
@@ -40,9 +45,9 @@ Preferences > Sync > Preset > Sublime Text
 Now every time you build (cmd + B)[on Mac], Skim will render your Tex page in a PDF rather quickly, whil also saving the new PDF and the Tex files.
 
 ## Additional Preferences
-Personally my settings are set as so for Sumblime.
+Personally my settings are set as so for Sublime.
 ```
-Sublime Text > Preferences > LaTeXing > Settings - User
+Sublime Text > Preference > Package Settings > LaTeXing > Settings - User
 ​
 {
     "log": true,
