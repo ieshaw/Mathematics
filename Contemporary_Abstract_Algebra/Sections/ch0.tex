@@ -1,0 +1,16 @@
+5. Show that if $a$ and $b$ are positive integers, then $ab = \text{lcm}(a,b) \bullet \text{gcd}(a,b)$.
+
+\begin{proof}
+By the Fundamental Theorem of Arithmetic (Theorem 0.3 in the book) that $a$ is the product of primes, and by definition the greatest common divisor is a product of a subset of these primes
+\[ a = \text{gcd}(a,b)\prod_{i=1}^{n} p_{a,i}\]
+Since by this definition
+\[\{\emptyset\} = \{p_{a,i}\} \cap \{p_{b,i}\}  \]
+Thus 
+\[\text{lcm}(a,b)= \text{gcd}(a,b)\prod_{i=1}^{n} p_{a,i} \prod_{j=1}^{m} p_{b,j}\]
+Therefore
+\begin{align}
+\text{lcm}(a,b) \text{gcd}(a,b) &= \text{gcd}(a,b)\text{gcd}(a,b)\prod_{i=1}^{n} p_{a,i} \prod_{j=1}^{m} p_{b,j} \\
+&= \big(\text{gcd}(a,b) \prod_{i=1}^{n} p_{a,i} \big)\big( \text{gcd}(a,b)\prod_{j=1}^{m} p_{b,j}\big) \\
+&= ab
+\end{align}
+\end{proof}
