@@ -14,3 +14,33 @@ Therefore
 &= ab
 \end{align}
 \end{proof}
+
+7. If $a$ and $b$ are integers and $n$ is a positive integer, prove that $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$ if and only if $n$ divides $a-b$.
+
+\begin{proof}
+Forward: If $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$, then $n$ divides $a-b$. 
+So we know that
+\begin{align}
+m_a, m_b, r, &\in \mathbb{Z} \\
+a &= m_an + r \\
+b &= m_bn + r \\
+\end{align}
+Doing some artihmetic
+\[ a - b = (m_a - m_b)n \implies n | (a - b)\]
+
+Backward: If $n$ divides $a-b$, then $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$.
+\begin{align}
+mn &= a - b \\
+a &= mn +b 
+\end{align}
+We also know by the Division Algortihm
+\begin{align*}
+b &= m_bn + r \\
+r &= b\;\mathrm{mod}\; n
+\end{align*}
+Thus with substitution
+\begin{align}
+a &= mn + m_bn + r \\
+&= n*(m - m_b) +r \implies r = a\;\mathrm{mod}\; n
+\end{align}
+\end{proof}
