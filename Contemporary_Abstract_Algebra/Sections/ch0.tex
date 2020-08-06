@@ -8,39 +8,68 @@ Since by this definition
 Thus 
 \[\text{lcm}(a,b)= \text{gcd}(a,b)\prod_{i=1}^{n} p_{a,i} \prod_{j=1}^{m} p_{b,j}\]
 Therefore
-\begin{align}
+\begin{align*}
 \text{lcm}(a,b) \text{gcd}(a,b) &= \text{gcd}(a,b)\text{gcd}(a,b)\prod_{i=1}^{n} p_{a,i} \prod_{j=1}^{m} p_{b,j} \\
 &= \big(\text{gcd}(a,b) \prod_{i=1}^{n} p_{a,i} \big)\big( \text{gcd}(a,b)\prod_{j=1}^{m} p_{b,j}\big) \\
 &= ab
-\end{align}
+\end{align*}
 \end{proof}
 
 7. If $a$ and $b$ are integers and $n$ is a positive integer, prove that $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$ if and only if $n$ divides $a-b$.
 
 \begin{proof}
 Forward: If $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$, then $n$ divides $a-b$. 
+
 So we know that
-\begin{align}
+\begin{align*}
 m_a, m_b, r, &\in \mathbb{Z} \\
 a &= m_an + r \\
 b &= m_bn + r \\
-\end{align}
+\end{align*}
 Doing some artihmetic
 \[ a - b = (m_a - m_b)n \implies n | (a - b)\]
 
 Backward: If $n$ divides $a-b$, then $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$.
-\begin{align}
+\begin{align*}
 mn &= a - b \\
 a &= mn +b 
-\end{align}
+\end{align*}
 We also know by the Division Algortihm
 \begin{align*}
 b &= m_bn + r \\
 r &= b\;\mathrm{mod}\; n
 \end{align*}
 Thus with substitution
-\begin{align}
+\begin{align*}
 a &= mn + m_bn + r \\
 &= n*(m - m_b) +r \implies r = a\;\mathrm{mod}\; n
-\end{align}
+\end{align*}
+\end{proof}
+
+11. Let $n$ and $a$ be positive integers and let $d=\text{gcd}(a,b)$. Show that the equation $ax\mod n = 1$ has a solution if and only if $d=1$.
+
+\begin{proof}
+Forward: If the equation $ax\mod n = 1$ has a solution, then $d=1$.
+
+By Theorem 0.2 (p.4),
+ \[ d=\text{gcd}(a,b) \implies \exists s,t \in \mathbb{Z} \text{ s.t. } as + nt = d\].
+
+ Also, by definition
+
+ \begin{align*}
+ ax\mod n = 1 \implies \exists m_n \in \mathbb{Z} \text{ s.t. } ax &= nm_n + 1 \\
+ ax - nm_n &= 1
+ \end{align*}
+
+Further reading of Theorem 0.2 says that $\text{gcd}(a,b)$ is the smallest possible integer of the form $as + nt = d$. Since 1 is the smallest possible integer, 
+\[1 = \text{gcd}(a,b)\]
+
+Backward: If $d=1$, then the equation $ax\mod n = 1$ has a solution.
+
+This is pretty straight forward
+\begin{align*}
+\text{gcd}(a,b) = 1 \implies \exists s,t \in \mathbb{Z} \text{ s.t. } as + nt &= 1 \\
+as &= n (-t) + 1\\
+as \mod n &= 1
+\end{align*}
 \end{proof}
