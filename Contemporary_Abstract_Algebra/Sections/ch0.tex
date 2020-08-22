@@ -1,4 +1,4 @@
-5. Show that if $a$ and $b$ are positive integers, then $ab = \text{lcm}(a,b) \bullet \text{gcd}(a,b)$.
+\textbf{5. Show that if $a$ and $b$ are positive integers, then $ab = \text{lcm}(a,b) \bullet \text{gcd}(a,b)$.}
 
 \begin{proof}
 By the Fundamental Theorem of Arithmetic (Theorem 0.3 in the book) that $a$ is the product of primes, and by definition the greatest common divisor is a product of a subset of these primes
@@ -15,7 +15,7 @@ Therefore
 \end{align*}
 \end{proof}
 
-7. If $a$ and $b$ are integers and $n$ is a positive integer, prove that $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$ if and only if $n$ divides $a-b$.
+\textbf{7. If $a$ and $b$ are integers and $n$ is a positive integer, prove that $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$ if and only if $n$ divides $a-b$.}
 
 \begin{proof}
 Forward: If $ a \;\mathrm{mod}\; n = b \;\mathrm{mod}\; n$, then $n$ divides $a-b$. 
@@ -46,7 +46,7 @@ a &= mn + m_bn + r \\
 \end{align*}
 \end{proof}
 
-11. Let $n$ and $a$ be positive integers and let $d=\text{gcd}(a,b)$. Show that the equation $ax\mod n = 1$ has a solution if and only if $d=1$.
+\textbf{11. Let $n$ and $a$ be positive integers and let $d=\text{gcd}(a,b)$. Show that the equation $ax\mod n = 1$ has a solution if and only if $d=1$.}
 
 \begin{proof}
 Forward: If the equation $ax\mod n = 1$ has a solution, then $d=1$.
@@ -71,5 +71,25 @@ This is pretty straight forward
 \text{gcd}(a,b) = 1 \implies \exists s,t \in \mathbb{Z} \text{ s.t. } as + nt &= 1 \\
 as &= n (-t) + 1\\
 as \mod n &= 1
+\end{align*}
+\end{proof}
+
+\textbf{12. Show that $5n + 3$ and $7n + 4$ are relatively prime for all $n$.}
+
+\begin{proof}
+As shown in Exercise 11, if the equation $ax\mod n = 1$ has a solution, then $\text{gcd}(a,b)=1$. Specified to this situation: If $(7n+4)x\mod(5n+3)=1$ has a solution, then $\text{gcd}(7n+4,5n+3)=1$ and thus are relatively prime.
+
+Consider the equation for unknown $p,x \in \mathbb{X}$
+\[(5n+3)p + 1 = (7n+4)x\]
+Well this can be solved with a $p=-7$ and $x=5$. Therefore $(7n+4)x\mod(5n+3)=1$ has a solution and $5n + 3$ and $7n + 4$ are relatively prime for all $n$.
+\end{proof}
+
+\textbf{17. Let $a,b,s$ and $t$ be integers. If $a \mod st = b \mod st$, show that $a \mod s = b \mod s$ and $a \mod t = b \mod t$. What condition on $s$ and $t$ is needed to make the converse true?}
+
+\begin{proof}
+Given that $a \mod st = b \mod st$, we know that $\exists r \in \mathbb{Z}$ for $p, q \in \mathbb{Z}$ such that
+\begin{align*}
+a &= stp + r \\
+b &= stq + r
 \end{align*}
 \end{proof}
